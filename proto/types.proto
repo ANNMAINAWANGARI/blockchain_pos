@@ -1,3 +1,16 @@
-syntax = "proto3"
+syntax = "proto3";
 
-option go_package = "github.com/ANNMAINAWANGARI/blockchain_pos01/proto"
+option go_package = "github.com/ANNMAINAWANGARI/blockchain_pos01/proto";
+
+message Block{
+    Header header=1;
+    repeated Transaction transactions = 2;
+}
+message Header{
+    int32 version =1;
+    int32 height = 2;
+    bytes prevHash = 3;
+    bytes rootHash = 4;
+    int64 timestamp = 5;
+}
+message Transaction{}
